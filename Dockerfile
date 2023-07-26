@@ -14,4 +14,4 @@ ENV PATH="${PATH}:/usr/local/flutter/bin:/usr/local/flutter/bin/cache/dart-sdk/b
 RUN flutter doctor -v
 # RUN flutter channel stable
 # RUN flutter upgrade
-RUN flutter --version && exit 1
+RUN flutter --version
