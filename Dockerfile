@@ -1,7 +1,5 @@
-ARG FLUTTER_VERSION=3.10.5
-
-
 FROM debian:latest AS flutter-builder
+ARG FLUTTER_VERSION=3.10.5
 
 # Install flutter dependencies
 RUN apt-get update
@@ -16,4 +14,4 @@ ENV PATH="${PATH}:/usr/local/flutter/bin:/usr/local/flutter/bin/cache/dart-sdk/b
 RUN flutter doctor -v
 # RUN flutter channel stable
 # RUN flutter upgrade
-RUN flutter --version
+RUN flutter --version && exit 1
