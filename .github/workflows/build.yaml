@@ -30,7 +30,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: 
-            ghcr.io/dwim-data/flutter-web-builder:3.10.5
+            ghcr.io/ejlevin1/flutter-web-builder:3.10.5
           target: flutter-builder
           build-args: |
               FLUTTER_VERSION=3.10.5
