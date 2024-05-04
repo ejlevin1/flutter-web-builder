@@ -15,3 +15,4 @@ RUN flutter doctor -v
 # RUN flutter channel stable
 # RUN flutter upgrade
 RUN flutter --version
+RUN flutter precache --web
