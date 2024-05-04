@@ -16,3 +16,12 @@ RUN flutter doctor -v
 # RUN flutter upgrade
 RUN flutter --version
 RUN flutter precache --web
+
+# Install python to help with scripting
+RUN apt-get update \
+    && apt-get install -y python3-pip python3-venv \
+    && apt-get clean
+
+# Setup the venv for python with pip packages
+RUN python3 -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
