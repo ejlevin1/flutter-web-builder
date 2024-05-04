@@ -37,7 +37,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: 
-            ghcr.io/ejlevin1/flutter-web-builder:${{ steps.get_version.outputs.VERSION }}
+            ghcr.io/ejlevin1/flutter-web-builder:${{ steps.get_version.outputs.VERSION }}-precache
           target: flutter-builder
           build-args: |
               FLUTTER_VERSION=${{ steps.get_version.outputs.VERSION }}
